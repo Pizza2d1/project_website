@@ -1,0 +1,134 @@
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.3em 1em;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 550;
+  line-height: 1.5;
+  text-decoration: none;
+  vertical-align: baseline;
+  cursor: pointer;
+  border-width: 0;
+  border-radius: 50;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.12),
+    0 3px 10px rgba(0, 0, 0, 0.08);
+  appearance: none;
+  border-radius: 5cap;
+
+  /* &:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(blue, 0.25);
+  } */
+}
+.btn:hover{
+  background-color: rgb(209, 209, 209);
+}
+.btn-green {
+  /* color: red; */
+  background-color: rgb(0, 221, 0);
+  color: white;
+}
+.btn-green:hover {
+  /* color: red; */
+  background-color: rgb(43, 207, 2);
+  color: white;
+}
+.btn-blue {
+  /* color: red; */
+  background-color: rgb(0, 88, 221);
+  color: white;
+}
+.btn-blue:hover {
+  /* color: red; */
+  background-color: rgb(42, 127, 255);
+  color: white;
+}
+.btn-red {
+  /* color: red; */
+  background-color: rgb(221, 0, 0);
+  color: white;
+}
+.btn-red:hover {
+  /* color: red; */
+  background-color: rgb(202, 0, 0);
+  color: white;
+}
+.btn-yellow {
+  /* color: red; */
+  background-color: rgb(255, 196, 0);
+  color: white;
+}
+.btn-yellow:hover {
+  /* color: red; */
+  background-color: rgb(226, 211, 1);
+  color: white;
+}
+
+
+.btn-square {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.3em 1em;
+  margin: 0;
+  font-family: inherit;
+  /* font-size: inherit; */
+  font-weight: 550;
+  line-height: 1.5;
+  text-decoration: none;
+  vertical-align: baseline;
+  cursor: pointer;
+  border-width: 0;
+  border-radius: 50;
+  box-shadow:
+    0 3px 2px rgba(0, 0, 0, 0.12),
+    0 13px 10px rgba(0, 0, 0, 0.08);
+  appearance: none;
+  color: black;
+  text-transform: uppercase;
+  background-color: rgb(224, 224, 224);
+}
+.btn-square:hover {
+  background-color: rgb(199, 199, 199);
+}
+.btn-round{
+    border-radius: 1000px;
+    text-transform: uppercase;
+}
+
+.normal {
+  font-size: 500;
+}
+
+.button-container {
+  display: inline-flex; /* or display: flex; */
+  align-items: center; /* Vertically center the content */
+}
+
+.button-text {
+  margin-left: 10px; /* Adjust spacing between button and text */
+  /* Text styles */
+}
+
+/* For movie stuff */
+button{
+    margin-top: 10px;
+    border: none;
+    padding: .85em 4em;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    font: inherit;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    cursor: pointer;
+    transition: 150ms ease;
+}
+button:hover{
+    background-color: white; 
+}
+.btn_shadow {
+  background-color: black;
+}

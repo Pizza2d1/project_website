@@ -1,0 +1,95 @@
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+
+
+#startDownload:disabled {
+  background-color: rgb(24, 209, 64);
+}
+
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: rgb(20, 20, 30);
+}
+
+#startDownload {
+  background-color: rgb(28, 252, 76);
+  font-size: 20px;
+  font-weight: bold;
+  border: 0;
+  padding: 10px;
+}
+
+.download-progress-bar__container {
+  margin: 20px 0;
+  width: 400px;
+  height: 20px;
+  background-color: rgb(5, 5, 4);
+  border-radius: 20px;
+}
+
+.download-progress-bar__progress {
+  background: linear-gradient(to right, blue, turquoise);
+  border-radius: 20px;
+  color: rgb(209, 209, 209);
+  font-weight: 900;
+  display: flex;
+  /* optional */
+  align-items: center; 
+  justify-content: center;
+  width: 0;
+  height: 100%;
+}
+
+button {
+  display: inline;
+}
+
+p {
+  color: white;
+  margin: 10px;
+}
+
+/* .download-progress-bar__progress.error {
+  background: red;
+} */

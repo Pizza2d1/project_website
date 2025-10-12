@@ -1,0 +1,16 @@
+*
+!.gitignore
+!index.php
+!happylizard_redirect.php
+!rss
+!rss/*
+!project_page
+!project_page/*
+!CSS
+!CSS/*
+!include
+!include/*
+!js
+!js/*
+!img
+!img/*

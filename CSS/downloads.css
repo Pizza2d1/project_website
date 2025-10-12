@@ -1,0 +1,13 @@
+.btn-mp4 {
+    background-color: red;
+}
+.btn-mp4:hover {
+    background-color: rgb(230, 2, 2);
+}
+.btn-mkv {
+    background-color: rgb(166, 255, 0);
+}
+.btn-mkv:hover {
+    background-color: rgb(166, 231, 0);
+}
+

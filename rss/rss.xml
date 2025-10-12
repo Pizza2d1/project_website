@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"><channel>
+    <title>Pizza2d1's RSS Blog</title>
+    <link>https://pizza2d1.duckdns.org/blog/</link>
+    <language>en-us</language>
+    <description>This is where I go on rants about stupid stuff, not because I really care about what I talk about, but because I spent so much time learning about blogs and rss viewers/feeds that it feels necessary to at least put some stuff on here.</description>
+    <item>
+      <title>Welcome!</title>
+      <description>This is my RSS feed page that I basically use as my blog for things that I want to just rant about whenever I’m bored, I may also include some other things later but for now this will just be a way for people to read my blog with using a browser using markdown, unless if you want to use RSS, in which you can use this URL: pizza2d1.duckdns.org/rss/ as the link
+(If this looks awful that’s because I only just barely started learning or I forgot about this and have been working on other stuf)</description>
+      <pubDate>Wed, 08 Oct 2025 02:22:37 GMT</pubDate>
+    </item>
+    <item>
+      <title>My experience with programming</title>
+      <description>
+Fuck optimization:
+
+Honestly, with the time that I have used to “optimize” my workspaces, IDEs, and creating my own one-off frameworks, I would have probably been able to learn more about ACTUAL CODING rather than having to listen the the autistic ramblings of people on reddit and github who are always preaching about “The best” or the “Top 10” kinds of Linux operating systems, DEs and ways to configure your terminal so that it works the best for them rather than just being useful.
+
+If I went back in time and only coded on a Mac I prob would have the same level of programming, except that using Macs are gay and only promote Apple products.
+
+Shiny rocks:
+
+Im a monkey, a stupid bird that looks at something colorful and shiny and I get gravitated towards it, I will find a project that I like and I will use it without looking for better alternatives because I feel like if it works first try then it works. When I was in high school I was constantly finding Youtube videos of cool new projects that I would just proceed to download on my computer to try and see if I can get it to work for myself as a cool new token to share with friends. That is especially true when I found Arch Linux, the transgender honeypot (respectfully).
+
+Sillies everywhere:
+
+If I were to guess why there are so many transgender people in the Arch/cybersecurity communities I would have a pretty safe bet that it is because there is such a low amount of cis women (around 20%) that in order to make up for it, people naturally converge to becoming femboys, homosexual (more likely bi in college), and transgender. I honestly could be contested on this and easily believe another rhetoric, but from what I have seen this seems to be pretty consistent.</description>
+      <pubDate>Wed, 08 Oct 2025 01:54:25 GMT</pubDate>
+    </item>
+</channel></rss>

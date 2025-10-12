@@ -1,0 +1,93 @@
+html {
+    background-color: rgb(10, 12, 20);
+}
+
+body {
+  align-items: center; 
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.previous-btn-square {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.2em 1em;
+  margin: 0;
+  font-family: inherit;
+  /* font-size: inherit; */
+  font-weight: 550;
+  line-height: 1.5;
+  text-decoration: none;
+  vertical-align: baseline;
+  cursor: pointer;
+  border-width: 0;
+  border-radius: 40;
+  box-shadow:
+    0 3px 2px rgba(255, 255, 255, 0.12),
+    0 13px 10px rgba(255, 255, 255, 0.08);
+  appearance: none;
+  color: black;
+  /* text-transform: uppercase; */
+  background-color: rgb(202, 36, 36);
+  border-radius: 25px;
+}
+.previous-btn-square:hover {
+  background-color: rgb(173, 45, 45);
+}
+.next-btn-square {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.2em 1em;
+  margin: 0;
+  font-family: inherit;
+  /* font-size: inherit; */
+  font-weight: 550;
+  line-height: 1.5;
+  text-decoration: none;
+  vertical-align: baseline;
+  cursor: pointer;
+  border-width: 0;
+  border-radius: 40;
+  box-shadow:
+    0 3px 2px rgba(255, 255, 255, 0.12),
+    0 13px 10px rgba(255, 255, 255, 0.08);
+  appearance: none;
+  color: black;
+  /* text-transform: uppercase; */
+  background-color: rgb(97, 202, 36);
+  border-radius: 25px;
+}
+.next-btn-square:hover {
+  background-color: rgb(66, 180, 51);
+}
+.download-btn-square {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0.2em 1em;
+  margin: 0;
+  font-family: inherit;
+  /* font-size: inherit; */
+  font-weight: 550;
+  line-height: 1.5;
+  text-decoration: none;
+  vertical-align: baseline;
+  cursor: pointer;
+  border-width: 0;
+  border-radius: 40;
+  box-shadow:
+    0 3px 2px rgba(255, 255, 255, 0.12),
+    0 13px 10px rgba(255, 255, 255, 0.08);
+  appearance: none;
+  color: black;
+  /* text-transform: uppercase; */
+  background-color: rgb(54, 104, 241);
+  border-radius: 25px;
+}
+.download-btn-square:hover {
+  background-color: rgb(56, 78, 202);
+}
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}

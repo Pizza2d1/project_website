@@ -1,0 +1,51 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: rgb(20, 20, 30);
+}
+
+#startDownload {
+  background-color: rgb(28, 252, 76);
+  font-size: 20px;
+  font-weight: bold;
+  border: 0;
+  padding: 10px;
+}
+
+.download-progress-bar__container {
+  margin: 20px 0;
+  width: 400px;
+  height: 20px;
+  background-color: rgb(5, 5, 4);
+  border-radius: 20px;
+}
+
+.download-progress-bar__progress {
+  background: linear-gradient(to right, blue, turquoise);
+  border-radius: 20px;
+  color: rgb(209, 209, 209);
+  font-weight: 900;
+  display: flex;
+  /* optional */
+  align-items: center; 
+  justify-content: center;
+  width: 0;
+  height: 100%;
+}
+
+button {
+  display: inline;
+}
+
+p {
+  color: white;
+  margin: 10px;
+}
