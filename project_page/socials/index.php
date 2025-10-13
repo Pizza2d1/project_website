@@ -1,4 +1,6 @@
-<?php include_once("include/var_declaration.php"); ?>        
+<?php $srv_root = __DIR__;
+$slash_count = substr_count($srv_root, '/');
+for ($i = 3; $i < $slash_count; $i++) {$srv_root = dirname($srv_root);}?>
 <?php include_once("$srv_root/include/all.php"); ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -10,11 +12,13 @@
     </head>
     <body>
       <div class="flex-wrapper">
+        <h1 style="text-align: center; font-size: 40px; text-decoration: underline;">Pizza2d1's Project Page</h1>
         <?php echo navbar(); ?>
         <?php echo project_boxes(); ?>        
+        <br><br><br><br><br>
+        <?php echo footer() ?>
       </div>
 
-      <?php echo footer() ?>
         
     </body>
 </html>
@@ -45,6 +49,7 @@ function project_boxes() {
         <a href='$info_box->href'><img src='$info_box->image' alt='$info_box->title' width='100%' height='auto'></a>
         </div>";
     }
+    $output .= "</div>";
     return $output;
 }
 function get_social_data() {

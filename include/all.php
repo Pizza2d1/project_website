@@ -23,7 +23,6 @@ return "
         <li><a href='/'>Homepage</a></li>
         <li><a href='/project_page/projects/'>Projects</a></li>
         <li><a href='/project_page/certifications/'>Certifications</a></li>
-        <li><a href='/project_page/socials/'>Socials</a></li>
         <div class='dropdown'>
             <button class='dropbtn'>Others
             <i class='fa fa-caret-down'>
@@ -31,8 +30,10 @@ return "
             <div class='dropdown-content'>
                 <a href='/rss/'>RSS blog</a>
                 <a href='/teto/'>Kasane Teto</a>
+                <a href='/project_page/file_uploading/'>File uploading (testing)</a>
             </div>
         </div>
+        <div class='navbar-social'><li><a href='/project_page/socials/'>Contact Me!</a></li></div>
     </ul>   
 </nav>
 ";
