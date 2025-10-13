@@ -24,7 +24,16 @@ return "
         <li><a href='/project_page/projects/'>Projects</a></li>
         <li><a href='/project_page/certifications/'>Certifications</a></li>
         <li><a href='/project_page/socials/'>Socials</a></li>
-    </ul>
+        <div class='dropdown'>
+            <button class='dropbtn'>Others
+            <i class='fa fa-caret-down'>
+            </button>
+            <div class='dropdown-content'>
+                <a href='/rss/'>RSS blog</a>
+                <a href='/teto/'>Kasane Teto</a>
+            </div>
+        </div>
+    </ul>   
 </nav>
 ";
 }

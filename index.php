@@ -16,7 +16,7 @@
           echo navbar();
           #echo winamp();
           echo welcome();
-          echo project_boxes();
+          echo project_boxes(3);
         ?>        
       </div>
         
