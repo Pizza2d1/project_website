@@ -56,7 +56,7 @@ a {
 }
 section {
   height: auto;
-  width: 100%;
+  width: 80%;
   display: grid;
   place-items: center;
 }
@@ -200,14 +200,17 @@ a {
 }
 
 .prog_completed {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
   background-color: #13ff07;
-  padding: 10px;
+  padding: 3px;
 }
 .prog_in_progress {
-  background-color: #e9ff1f;
-  padding: 10px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background-color: #1f57ff;
+  padding: 3px;
 }
 .prog_on_hold {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
   background-color: #ff7f29;
-  padding: 10px;
+  padding: 3px;
 }
