@@ -1,21 +1,21 @@
 <?php
-function footer() { # https://stackoverflow.com/questions/4575826/how-to-push-a-footer-to-the-bottom-of-page-when-content-is-short-or-missing
+
+function head($css_list) {
     return "
-      <div class='footer'>
-        <div class='mw-footer-container' style='color: white;'>
-            <footer>
-                <ul>
-                    <li>This page was last updated on 9/19/25 at 3:09 AM</li>
-                    <li>I don't even know how much of this I will continue working on tbh</li>
-                </ul>
-                <ul>
-                    <li><a href='https://en.wikipedia.org/wiki/Terry_A._Davis'>The man, the myth, the legend</a></li>
-                </ul>
-            </footer>
-        </div>
-      </div>
-    ";
+    <head>
+        <title>Pizza2d1's Webpage</title>
+        <link rel='icon' href='/img/favicon.png' type='image/x-icon'>
+    " . css_pointers($css_list) . "
+    </head>";
 }
+function css_pointers($css_list) {
+    $output = '';
+    foreach ($css_list as $css_name) {
+        $output .= "<link rel='stylesheet' href='/CSS/$css_name.css'>";
+    }
+    return $output;
+}
+
 function navbar() {
 return "
 <nav class='navbar'>
@@ -37,5 +37,22 @@ return "
     </ul>   
 </nav>
 ";
+}
+function footer() { # https://stackoverflow.com/questions/4575826/how-to-push-a-footer-to-the-bottom-of-page-when-content-is-short-or-missing
+    return "
+      <div class='footer'>
+        <div class='mw-footer-container' style='color: white;'>
+            <footer>
+                <ul>
+                    <li>This page was last updated on 9/19/25 at 3:09 AM</li>
+                    <li>I don't even know how much of this I will continue working on tbh</li>
+                </ul>
+                <ul>
+                    <li><a href='https://en.wikipedia.org/wiki/Terry_A._Davis'>The man, the myth, the legend</a></li>
+                </ul>
+            </footer>
+        </div>
+      </div>
+    ";
 }
 ?>

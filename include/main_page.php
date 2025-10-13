@@ -87,7 +87,7 @@ function getInfoAsBox($info_box) {
             "in progress" => "<div class='prog_in_progress'><h4>$ps</h4></div>",
             "on hold" => "<div class='prog_on_hold'><h4>$ps</h4></div>",
         };
-        $image = (strtolower($info_box->image) == "none") ? "" : "<img src=$info_box->image alt='Image not found' width='100%' height='auto'>";
+        $image = (strtolower($info_box->image) == "none") ? "" : "<a href='$info_box->href'><img src=$info_box->image alt='Image not found' width='100%' height='auto'></a>";
         $link = (strtolower($info_box->href) == "none") ? "<h2>$info_box->title</h2>" : "<a href=$info_box->href><h2>$info_box->title</h2></a>";
         return "
             <div class='show-card'>
