@@ -27,7 +27,7 @@
       fclose($myfile);
       $blogFilename = parseBlogname($file_to_read);
       $blogFileLocation = updateFile($blogFilename, $contentToAdd);
-      echo "<a href='".$blogFileLocation."'>".$blogFilename."</a>";
+      echo "<h3><a href='".$blogFileLocation."'>".$blogFilename."</a></h3>";
     };
 
 ?>
