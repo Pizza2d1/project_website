@@ -12,10 +12,13 @@ if (!is_dir('./uploads')) {
 <html lang="en-US">
   <?php echo head(['all']); ?>
   <body>
+    <div 'class=centered;'>
     <form action="upload.php" method="post" enctype="multipart/form-data">
       Select image to upload:
       <input type="file" name="fileToUpload" id="fileToUpload">
       <input type="submit" value="Upload Image" name="submit">
     </form>
+    </div>
+    <h3>Currently only JPG, JPEG, PNG, GIF, and WEBM files are allowed.(images basically)</h3>
   </body>
 </html>

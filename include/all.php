@@ -31,6 +31,7 @@ return "
                 <a href='/rss/'>RSS blog</a>
                 <a href='/teto/'>Kasane Teto</a>
                 <a href='/project_page/file_uploading/'>File uploading (testing)</a>
+                <a href='/project_page/file_uploading/uploads/checkpoint.php'>File Uploads</a>
             </div>
         </div>
         <div class='navbar-social'><li><a href='/project_page/socials/'>Contact Me!</a></li></div>

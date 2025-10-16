@@ -29,9 +29,8 @@ if ($_FILES["fileToUpload"]["size"] > 10000000) { // 10 GB
 }
 
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" && $imageFileType != "webm" ) {
+  echo "Sorry, only JPG, JPEG, PNG, GIF, and WEMB files are allowed.";
   $uploadOk = 0;
 }
 
@@ -41,7 +40,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+    echo "<h1 style='text-align:center;'>The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.</h1>";
   } else {
     echo "Sorry, there was an error uploading your file.";
   }
@@ -49,4 +48,4 @@ if ($uploadOk == 0) {
 ?>
 
 <br>
-<a href="./uploads/">Check current uploads</a>
+<h1 style='text-align:center;'><a href="./uploads/">Check current uploads</a></h1>

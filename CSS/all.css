@@ -1,14 +1,8 @@
-html {
+html, body {
     font-family: Poppins, Segoe UI, sans-serif;
+    /* background-color: black;
+    color: #fff; */
 }
-
-body {
-    font-family: Poppins, Segoe UI, sans-serif;
-}
-body::-webkit-scrollbar {
-  display: none;
-}
-
 
 .disclaimer {
     color: red;
@@ -148,4 +142,8 @@ ul {
 .toc_title {
     text-align: center;
     font-weight: bold;
+}
+
+.centered {
+  self-align: center;
 }
