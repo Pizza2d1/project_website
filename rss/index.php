@@ -9,6 +9,8 @@
   <body>
 <?php
 
+    echo "<h4><a href='/'>Homepage</a></h4>";
+
     $mdFiles = glob("*.md"); 
     
     require_once 'Parsedown.php';
