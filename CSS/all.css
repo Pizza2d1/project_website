@@ -1,8 +1,14 @@
-html, body {
+html {
     font-family: Poppins, Segoe UI, sans-serif;
-    /* background-color: black;
-    color: #fff; */
 }
+
+body {
+    font-family: Poppins, Segoe UI, sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 .disclaimer {
     color: red;
@@ -88,33 +94,31 @@ ul {
   border: none;
   outline: none;
   color: white;
-  padding: 18px;
+  padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
-  color: white;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #6e6e6e;
+  background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  border-radius: 0px 15px 15px 15px;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: rgb(255, 255, 255);
+  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -123,9 +127,7 @@ ul {
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #6e6e6e;
-  color: red;
-  border-radius: 15px;
+  background-color: #ddd;
 }
 
 /* Show the dropdown menu on hover */
@@ -146,24 +148,4 @@ ul {
 .toc_title {
     text-align: center;
     font-weight: bold;
-}
-
-.flex-wrapper {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Bubbles */
-.alert {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  font-size: 20px;
-  background-color: #f6ff00;
-  color: black;
-  width: 45%;
-  padding: 3px;
-  border-radius: 10px;
 }

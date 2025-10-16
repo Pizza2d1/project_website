@@ -10,23 +10,8 @@
 <?php
 
     $mdFiles = glob("*.md"); 
-    #$printString = "";
-    #foreach ($mdFiles as $file_to_read) {
-    #  $lines = file($file_to_read);//file in to an array
-    #  $first_line = $lines[0];
-    #  $second_line = $lines[1];
-    #  if (substr($first_line, 0, 2) == "##") {
-    #      $printString = str_replace('##', '', $first_line);
-    #  } else {
-    #      $printString = $second_line; 
-    #  };
-    #  echo format_toc($printString);
-    #};
     
     require_once 'Parsedown.php';
-    #require_once 'vendor/erusev/parsedown/Parsedown.php';
-    #require_once 'vendor/caseyamcl/toc/src/HtmlHelper.php';
-    #require_once 'vendor/caseyamcl/toc/src/TocGenerator.php';
     $Parsedown = new Parsedown();
     $allBlogText = "";
     foreach ($mdFiles as $file_to_read) {
@@ -37,8 +22,6 @@
     };
 
     echo $allBlogText;
-    
-
 
 ?>
   </body>
