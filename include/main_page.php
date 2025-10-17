@@ -95,13 +95,19 @@ function getInfoAsBox($info_box) {
                 $link
                 $image
                 <h3>About:</h3>
-                <h4>$info_box->about</h4>
+                <div class='prog_about'><h4>$info_box->about</h4></div>
             </div>
         </div>";
 };
 function welcome() {
 return "
-<h1 style='text-align:center'>Welcome!</h1>
-<h2 style='text-align:center'>My name is Nathan and this is my website where I store info about my current and past projects</h2>
+<div class='welcome'>
+<h1>Welcome!</h1>
+<h2>My name is Nathan and this is my website where I store info about my current and past projects</h2>
+</div>
 ";}
+function github_advert() {
+  echo "<br><div class='alert'><h3>If you would like to see more, most of my projects are available on <a href='https://github.com/pizza2d1/'>github</a></div><br>
+  ";
+}
 ?>

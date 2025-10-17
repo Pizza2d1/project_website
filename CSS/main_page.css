@@ -69,7 +69,7 @@ body {
     height: 380px;
     position: fixed;
     bottom: 50px;
-    right: 120px;
+    right: 100px;
     padding: 0;
     margin: 0;
     z-index: -1;
@@ -280,5 +280,24 @@ a:hover {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   background-color: #e6894b;
   padding: 3px;
+  border-radius: 10px;
+}
+.prog_about {
+  bottom: 10px;
+}
+
+.welcome {
+  text-align: center;
+  align-items: center;
+}
+.alert {
+  color: black;
+  background-color: rgb(202, 202, 20);
+  background-size: contain;
+  width: 30%;
+  margin: 0 auto; /* Centers horizontally */
+  text-align: center;
+  align-items: center;
+  align-content: center;
   border-radius: 10px;
 }

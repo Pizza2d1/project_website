@@ -4,8 +4,7 @@
 <html lang="en-US">
     <?php echo head(['all', 'buttons', 'main_page']); ?>
     <body>
-      <div class="flex-wrapper">
-        <h1 style="text-align: center; font-size: 40px; text-decoration: underline;">Pizza2d1's Project Page</h1>
+      <h1 style="text-align: center; font-size: 40px; text-decoration: underline;">Pizza2d1's Project Page</h1>
         <?php
           echo navbar();
           #echo winamp();
@@ -13,6 +12,5 @@
           echo project_boxes(3);
           echo footer();
         ?>        
-      </div>
     </body>
 </html>
