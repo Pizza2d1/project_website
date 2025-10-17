@@ -11,7 +11,11 @@ function head($css_list) {
 function css_pointers($css_list) {
     $output = '';
     foreach ($css_list as $css_name) {
-        $output .= "<link rel='stylesheet' href='/CSS/$css_name.css'>";
+        if (str_contains($css_name, 'https:')) {
+            $output .= "<link rel='stylesheet' href='$css_name'>";
+        } else {
+            $output .= "<link rel='stylesheet' href='/CSS/$css_name.css'>";
+        }
     }
     return $output;
 }
@@ -55,5 +59,11 @@ function footer() { # https://stackoverflow.com/questions/4575826/how-to-push-a-
         </div>
       </div>
     ";
+}
+function winamp() {
+  return "
+  <div id='winamp-container'></div>
+  <script src='https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js'></script>
+  <script src='/js/webamp.js'></script>";
 }
 ?>

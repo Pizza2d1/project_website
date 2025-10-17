@@ -99,12 +99,6 @@ function getInfoAsBox($info_box) {
             </div>
         </div>";
 };
-function winamp() {
-  return "
-  <div id='winamp-container'></div>
-  <script src='https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js'></script>
-  <script src='js/webamp.js'></script>";
-}
 function welcome() {
 return "
 <h1 style='text-align:center'>Welcome!</h1>
