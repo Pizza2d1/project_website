@@ -14,6 +14,7 @@ include_once("$srv_root/include/all.php");?>
         echo navbar();
         echo social_boxes();      
         echo "<br><br><br><br><br><br><br><br><br>";
+        echo "<br><br><br><br><br><br><br><br><br>";
         echo footer()
         ?>
     </body>

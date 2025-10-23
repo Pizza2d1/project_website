@@ -14,6 +14,7 @@ for ($i = 3; $i < $slash_count; $i++) {$srv_root = dirname($srv_root);}?>
           echo github_advert();
           echo project_boxes(99); # Just show everything
           echo footer()
+          
         ?>
     </body>
 </html>

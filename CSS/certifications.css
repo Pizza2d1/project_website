@@ -108,3 +108,11 @@ a {
   clear: both;
   display: table;
 }
+/* FOR CIRCLE
+div{position:absolute;}
+.center-thing {
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+} */
