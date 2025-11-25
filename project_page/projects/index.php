@@ -2,8 +2,8 @@
 $slash_count = substr_count($srv_root, '/');
 for ($i = 3; $i < $slash_count; $i++) {$srv_root = dirname($srv_root);}?>
 
-<?php include_once("$srv_root/include/all.php"); ?>   
-<?php include_once("$srv_root/include/main_page.php"); ?>   
+<?php include_once("$srv_root/includes/all.php"); ?>   
+<?php include_once("$srv_root/includes/main_page.php"); ?>   
 <!DOCTYPE html>
 <html lang="en-US">
 <?php echo head(['all','main_page'])?>
@@ -14,7 +14,6 @@ for ($i = 3; $i < $slash_count; $i++) {$srv_root = dirname($srv_root);}?>
           echo github_advert();
           echo project_boxes(99); # Just show everything
           echo footer()
-          
         ?>
     </body>
 </html>

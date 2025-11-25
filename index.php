@@ -1,5 +1,10 @@
-<?php include_once("include/main_page.php"); ?>        
-<?php include_once("include/all.php"); ?>        
+<?php 
+  session_start();
+  include_once("includes/main_page.php");
+  include_once("includes/all.php");
+  include_once("includes/sql_functions.php");
+  [$usernames, $passwords, $admins] = getUsersSql();
+?>
 <!DOCTYPE html>
 <html lang="en-US">
     <?php echo head(['all', 'buttons', 'main_page']); ?>

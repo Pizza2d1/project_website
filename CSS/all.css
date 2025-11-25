@@ -54,6 +54,10 @@ ul {
   float: left;
   overflow: hidden;
 }
+.dropdown-right {
+  float: right;
+  overflow: hidden;
+}
 
 .navbar ul {
     list-style-type: none;
@@ -79,6 +83,9 @@ ul {
     float: left;
 }
 
+.navbar-right li{
+    float: right;
+}
 .navbar-social li{
     float: right;
 }

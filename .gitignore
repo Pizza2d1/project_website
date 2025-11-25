@@ -18,4 +18,5 @@
 !project_page/file_uploading/upload.php
 !project_page/file_uploading/index.php
 project_page/file_uploading/uploads/*
+includes/sql_functions.php
 
