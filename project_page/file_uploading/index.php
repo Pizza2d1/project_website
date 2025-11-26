@@ -12,15 +12,67 @@ if (!is_dir('./uploads')) {
 <!DOCTYPE html>
 <html lang="en-US">
   <?php echo head(['all']); ?>
+  <style>
+    form {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: 0 auto;
+      font-family: sans-serif;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    .selected-file {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
   <body>
+    <?php echo navbar(); ?>
+    <h3>Currently only JPG, JPEG, PNG, GIF, and WEBM files are allowed. (images basically)</h3>
+    <h3>1 GB file upload limit per file, unless you are logged in in which case you can upload 10GB files</h3>
+    <h3>Still working on a good progress bar, I really don't want to learn javascript to do it</h3>
+    <br><br><br>
     <div 'class=centered;'>
     <form action="upload.php" method="post" enctype="multipart/form-data">
-      Select image to upload:
-      <input type="hidden" name="PHP_SESSION_UPLOAD_PROGRESS" value="unique_upload_id" />
-      <input type="file" name="fileToUpload" id="fileToUpload">
+      <input type="hidden" name="<?php echo ini_get("session.upload_progress.name"); ?>" value="123" />
+      <label for="file">Select a file to upload:</label>
+      <input id="file" type="file" name="fileToUpload" id="fileToUpload">
       <input type="submit" value="Upload Image" name="submit">
+      <div class="selected-file" id="selectedFile"></div>
     </form>
     </div>
-    <h3>Currently only JPG, JPEG, PNG, GIF, and WEBM files are allowed.(images basically)</h3>
+<?php
+echo $_SESSION['upload_progress_123']['files'][0]['name'];
+?>
+
+
+
   </body>
 </html>
+
+
