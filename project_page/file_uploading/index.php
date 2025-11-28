@@ -58,18 +58,14 @@ if (!is_dir('./uploads')) {
     <h3>Still working on a good progress bar, I really don't want to learn javascript to do it</h3>
     <br><br><br>
     <div 'class=centered;'>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-      <input type="hidden" name="<?php echo ini_get("session.upload_progress.name"); ?>" value="123" />
+    <form id="uploadForm" method="post" action="upload.php" enctype="multipart/form-data">
+      <input type="hidden" name="UPLOAD_IDENTIFIER" value="<?php echo uniqid(); ?>" id="upload_id">
       <label for="file">Select a file to upload:</label>
       <input id="file" type="file" name="fileToUpload" id="fileToUpload">
       <input type="submit" value="Upload Image" name="submit">
       <div class="selected-file" id="selectedFile"></div>
     </form>
     </div>
-<?php
-echo $_SESSION['upload_progress_123']['files'][0]['name'];
-?>
-
 
 
   </body>

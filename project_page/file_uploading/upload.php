@@ -1,11 +1,9 @@
 <?php
-session_start();
 $srv_root = __DIR__;
 $slash_count = substr_count($srv_root, '/');
 for ($i = 3; $i < $slash_count; $i++) {$srv_root = dirname($srv_root);}
-include_once("$srv_root/includes/all.php");   
+include_once("$srv_root/includes/all.php");
 
-if (isset($_SESSION['upload_progress_123'])) echo $_SESSION['upload_progress_123']['files'][0]['name'];
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -43,7 +41,7 @@ if (!isGranted()) {
 } 
 
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" && $imageFileType != "webm" ) {
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" && $imageFileType != "webm" && $imageFileType != 'mp4') {
   echo "Sorry, only JPG, JPEG, PNG, GIF, and WEMB files are allowed.";
   $uploadOk = 0;
 }
