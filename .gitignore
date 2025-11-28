@@ -16,8 +16,8 @@
 !img
 !img/*
 !project_page/file_uploading/upload.php
-!project_page/file_uploading/uploads/index.php
 !project_page/file_uploading/index.php
 project_page/file_uploading/uploads/*
+!project_page/file_uploading/uploads/index.php
 includes/sql_functions.php
 
