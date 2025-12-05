@@ -16,33 +16,45 @@ if(isset($_POST["submit"])) {
     echo "File is an image - " . $check["mime"] . ".";
     $uploadOk = 1;
   } else {
-    echo "File is not an image.";
-    $uploadOk = 0;
+    #echo "File is not an image.";
+    #$uploadOk = 0;
   }
 }
 
 // Check if file already exists
 if (file_exists($target_file)) {
-  echo "Sorry, file already exists.";
+  echo "Sorry, file already exists. Name: ".$_FILES["fileToUpload"]["name"];
   $uploadOk = 0;
 }
 
 // Check file size
-if (!isGranted()) {
-  if ($_FILES["fileToUpload"]["size"] > 1000000) { // 10 GB
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-  }
-} else {
-  if ($_FILES["fileToUpload"]["size"] > 10000000) { // 10 GB
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-  }
-} 
+#if (!isGranted()) {
+#  if ($_FILES["fileToUpload"]["size"] > 10000000) { // 10 GB
+#    echo "Sorry, your file is too large.";
+#    $uploadOk = 0;
+#  }
+#} else {
+#  if ($_FILES["fileToUpload"]["size"] > 100000000) { // 10 GB
+#    echo "Sorry, your file is too large.";
+#    $uploadOk = 0;
+#  }
+#} 
 
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" && $imageFileType != "webm" && $imageFileType != 'mp4') {
-  echo "Sorry, only JPG, JPEG, PNG, GIF, and WEMB files are allowed.";
+$image_ext = array("jpg", "png", "jpeg", "gif", "webm"); 
+$video_ext = array("mp4", "mov", "mkv", "webp"); 
+$audio_ext = array("wav", "mp3", "m4a"); 
+$archive_ext = array("zip", "gz", "iso", "tar", "7z"); 
+if(in_array($imageFileType, $image_ext)) {
+  echo "Your image was processed";
+} elseif (in_array($imageFileType, $video_ext)) {
+  echo "Your video was processed";
+} elseif (in_array($imageFileType, $audio_ext)) {
+  echo "Your audio was processed";
+} elseif (in_array($imageFileType, $archive_ext)) {
+  echo "Your archive file was processed";
+} else {
+  echo "Your file extension ".$imageFileType." was not allowed";
   $uploadOk = 0;
 }
 
@@ -51,6 +63,7 @@ if ($uploadOk == 0) {
   echo "Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
+  echo $_FILES["fileToUpload"]["size"];
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
     echo "<h1 style='text-align:center;'>The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.</h1>";
   } else {
