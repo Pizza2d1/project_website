@@ -4,6 +4,7 @@
   include_once("includes/all.php");
   include_once("includes/sql_functions.php");
   [$usernames, $passwords, $admins] = getUsersSql();
+  create_profile_dirs();
 ?>
 <!DOCTYPE html>
 <html lang="en-US">

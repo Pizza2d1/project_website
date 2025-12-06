@@ -28,3 +28,28 @@ h1 {
     transform: scale(1.05);
     border-color: #888;
 }
+
+* {
+  box-sizing: border-box; /* Ensures width includes padding and border */
+}
+
+.info-box {
+  width: 250px;           /* Sets a specific width for the box */
+  padding: 15px;          /* Space between the content and the border */
+  border: 1px solid #ccc; /* A thin, solid gray border */
+  margin: 10px;           /* Space outside the box, separating it from other elements */
+  background-color: #f9f9f9; /* A light background color */
+  border-radius: 5px;     /* Slightly rounded corners for a softer look */
+  font-family: sans-serif; /* Readable font */
+}
+
+.info-box h3 {
+  margin-top: 0;          /* Remove default top margin from the heading */
+  font-size: 1.1em;       /* Adjust the title font size */
+}
+
+.info-box p {
+  margin-bottom: 0;       /* Remove default bottom margin from the paragraph */
+  font-size: 0.9em;       /* Adjust the description font size */
+  color: #555;            /* Softer color for the description text */
+}
