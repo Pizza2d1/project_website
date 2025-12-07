@@ -3,6 +3,12 @@
 !.gitignore
 !index.php
 !happylizard_redirect.php
+!login.php
+!logout.php
+!penisbobo.php
+!account.php
+!create-account.php
+!create-profile.php
 !rss
 !rss/*
 !project_page
@@ -20,4 +26,11 @@
 project_page/file_uploading/uploads/*
 !project_page/file_uploading/uploads/index.php
 includes/sql_functions.php
+!account_uploads/index.php
+!account_uploads/main.php
+!account_uploads/images.php
+!account_uploads/videos.php
+!account_uploads/audios.php
+!account_uploads/archives.php
+!account_uploads/upload.php
 

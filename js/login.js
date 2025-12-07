@@ -85,7 +85,7 @@ class MaterialLoginForm {
         }, 600);
     }
     
-function redirectPost(url, data) {
+redirectPost(url, data) {
     const form = document.createElement('form');
     form.method = 'post';
     form.action = url;
