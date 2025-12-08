@@ -37,9 +37,17 @@ includes/sql_functions.php
 !account_uploads/archives.php
 !account_uploads/upload.php
 !streaming
+!streaming/audio
+streaming/audio/*
 !streaming/audio/index.php
 !streaming/games
+streaming/games/*
+!streaming/games/index.php
 !streaming/shows
+streaming/shows/*
+!streaming/shows/index.php
 !streaming/movies
+streaming/movies/*
+!streaming/movies/index.php
 !streaming/index.php
 
