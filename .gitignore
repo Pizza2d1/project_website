@@ -21,11 +21,14 @@
 !js/*
 !img
 !img/*
+!project_page
+!project_page/file_uploading
 !project_page/file_uploading/upload.php
 !project_page/file_uploading/index.php
 project_page/file_uploading/uploads/*
 !project_page/file_uploading/uploads/index.php
 includes/sql_functions.php
+!account_uploads
 !account_uploads/index.php
 !account_uploads/main.php
 !account_uploads/images.php
@@ -33,4 +36,10 @@ includes/sql_functions.php
 !account_uploads/audios.php
 !account_uploads/archives.php
 !account_uploads/upload.php
+!streaming
+!streaming/audio/index.php
+!streaming/games
+!streaming/shows
+!streaming/movies
+!streaming/index.php
 
