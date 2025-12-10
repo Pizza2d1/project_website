@@ -50,4 +50,6 @@ streaming/shows/*
 streaming/movies/*
 !streaming/movies/index.php
 !streaming/index.php
+!streaming/includes
+!streaming/includes/*
 

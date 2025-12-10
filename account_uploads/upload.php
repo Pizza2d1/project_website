@@ -5,7 +5,7 @@ $slash_count = substr_count($srv_root, '/');
 for ($i = 3; $i < $slash_count; $i++) {$srv_root = dirname($srv_root);}
 include_once("$srv_root/includes/all.php");
 
-$target_dir = $_SESSION['username']."_uploads/";
+$target_dir = "UPLOADS/".$_SESSION['username']."_uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -67,7 +67,7 @@ if ($uploadOk == 0) {
   echo $_FILES["fileToUpload"]["size"];
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
     echo "<h1 style='text-align:center;'>The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.</h1>";
-    $_SESSION['upload_name'] = $_FILES["fileToUpload"]["name"];
+    "UPLOADS/".$_SESSION['upload_name'] = $_FILES["fileToUpload"]["name"];
   } else {
     echo "Sorry, there was an error uploading your file.";
   }

@@ -7,10 +7,10 @@
     $username = $_SESSION['username'];
     $email = (isset($emails[$username])) ? $emails[$username] : "";
     $pfp = (isset($pfps[$username])) ? $pfps[$username] : "";
-    $about = (isset($abouts[$username])) ? $abouts[$username] : "";
+    $about = (isset($abouts[$username])) ? "$abouts[$username]" : "";
     $description = (isset($descriptions[$username])) ? $descriptions[$username] : "";
     $site = (isset($sites[$username])) ? $sites[$username] : "";
-    
+
 
     $catch_email = (isset($_POST['email'])) ? $_POST['email'] : "";
     $catch_pfp = (isset($_POST['pfp'])) ? $_POST['pfp'] : "";
@@ -24,15 +24,15 @@
 
     <h3><a href="/">Homepage</a></h3>
 		<form action='create-profile.php' method='post'>	
-    <input type='text' name='pfp' placeholder='Profile Picture', value=<?= $pfp ?>>
+    <input type='text' name='pfp' placeholder='Profile Picture', value="<?= $pfp ?>">
     <br>
-    <input type='text' name='email' placeholder='Email', value=<?= $email ?>>
+    <input type='text' name='email' placeholder='Email', value="<?= $email ?>">
     <br>
-    <input type='text' name='about' placeholder='About', value=<?= $about ?>>
+    <input type='text' name='about' placeholder='About', value="<?= $about ?>">
     <br>
-    <input type='text' name='description' placeholder='Description', value=<?= $description ?>>
+    <input type='text' name='description' placeholder='Description', value="<?=$description ?>">
     <br>
-    <input type='text' name='site' placeholder='Website', value=<?= $site ?>>
+    <input type='text' name='site' placeholder='Website', value="<?= $site ?>">
     <br>
     <input type="submit" value="Update Profile" name="submit_button">
     <input type="reset">

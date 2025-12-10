@@ -8,7 +8,7 @@ include_once("includes/functions.php");
 $videoExtensions = ['mp4', 'mov', 'mkv', 'webm', 'm4v'];
 
 // Get all files in the current directory
-$files = scandir(__DIR__."/".$_SESSION['username']."_uploads");
+$files = scandir(__DIR__."/UPLOADS/".$_SESSION['username']."_uploads");
 
 // Filter files that are images
 $images = array_filter($files, function ($file) use ($videoExtensions) {
@@ -28,7 +28,7 @@ return in_array($ext, $videoExtensions);
             <?php foreach ($images as $image): ?>
                 <h3><?= htmlspecialchars($image) ?></h3>
                 <video width=1320 height=720 controls preload=auto>
-                    <source src='<?= $_SESSION['username']."_uploads/".htmlspecialchars($image) ?>' type='video/mp4'>
+                    <source src='<?= "UPLOADS/".$_SESSION['username']."_uploads/".htmlspecialchars($image) ?>' type='video/mp4'>
                 </video>
             <?php endforeach; ?>
         </div>

@@ -3,6 +3,7 @@ $slash_count = substr_count($srv_root, '/');
 for ($i = 3; $i < $slash_count; $i++) {$srv_root = dirname($srv_root);}
 include_once("$srv_root/includes/all.php");
 include_once("../includes/functions.php");
+include_once("../includes/audio_func.php");
 
 $audioExtensions = ['mp3', 'm4a', 'wav'];
 
@@ -16,7 +17,7 @@ $audioExtensions = ['mp3', 'm4a', 'wav'];
     <?php echo navbar(); ?>
         <h1>Audio Lounge</h1>
         <div class='gallery'>
-            <?php showBlocks(__DIR__); ?>
+            <?php showArtistBlocks(__DIR__); ?>
         </div>
 
     </body>

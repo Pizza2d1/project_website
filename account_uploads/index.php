@@ -5,7 +5,8 @@ for ($i = 3; $i < $slash_count; $i++) {$srv_root = dirname($srv_root);}
 include_once("$srv_root/includes/all.php");       
 
 if (!isGranted()) header('location: /');;
-if (!is_dir(__DIR__."/".$_SESSION['username']."_uploads/")) mkdir(__DIR__."/".$_SESSION['username']."_uploads/", 0755);
+if (!is_dir(__DIR__."/UPLOADS/".$_SESSION['username']."_uploads/")) mkdir(__DIR__."/UPLOADS/".$_SESSION['username']."_uploads/", 0755);
+if (!is_dir(__DIR__."/UPLOADS/".$_SESSION['username']."_uploads/ENCRYPTED")) mkdir(__DIR__."/UPLOADS/".$_SESSION['username']."_uploads/ENCRYPTED", 0755);
 #if (!is_file($_SESSION['username']."_uploads/index.php")) copy("includes/index.php", $_SESSION['username']."_uploads/index.php");
 #if (!is_file($_SESSION['username']."_uploads/videos.php")) copy("includes/videos.php", $_SESSION['username']."_uploads/videos.php");
 #if (!is_file($_SESSION['username']."_uploads/audios.php")) copy("includes/audios.php", $_SESSION['username']."_uploads/audios.php");
@@ -57,7 +58,6 @@ if (!is_dir(__DIR__."/".$_SESSION['username']."_uploads/")) mkdir(__DIR__."/".$_
   </style>
   <body>
     <?php echo navbar(); ?>
-    <div 'class=centered;'>
     <form id="uploadForm" method="post" action="upload.php" enctype="multipart/form-data">
       <input type="hidden" name="UPLOAD_IDENTIFIER" value="<?php echo uniqid(); ?>" id="upload_id">
       <label for="file">Select a file to upload:</label>
@@ -67,7 +67,6 @@ if (!is_dir(__DIR__."/".$_SESSION['username']."_uploads/")) mkdir(__DIR__."/".$_
     </form>
     <?php if (isset($_SESSION['upload_name'])) echo $_SESSION['upload_name']." was uploaded"; ?>
     <h3><a href="main.php">Check your current uploads</a></h3>
-    </div>
     <h3>Currently allowed file types:</h3>
     <h3>Images</h3>
     <h4>"JPG", "PNG", "JPEG", "GIF", "WEBM"</h4>
@@ -83,5 +82,3 @@ if (!is_dir(__DIR__."/".$_SESSION['username']."_uploads/")) mkdir(__DIR__."/".$_
 
   </body>
 </html>
-
-

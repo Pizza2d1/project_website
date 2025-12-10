@@ -8,7 +8,7 @@ include_once("includes/functions.php");
 $audioExtensions = ['mp3', 'm4a', 'wav'];
 
 // Get all files in the current directory
-$files = scandir(__DIR__."/".$_SESSION['username']."_uploads");
+$files = scandir(__DIR__."/UPLOADS/".$_SESSION['username']."_uploads");
 
 // Filter files that are images
 $images = array_filter($files, function ($file) use ($audioExtensions) {

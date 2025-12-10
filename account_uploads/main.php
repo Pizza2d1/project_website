@@ -4,6 +4,8 @@ $slash_count = substr_count($srv_root, '/');
 for ($i = 3; $i < $slash_count; $i++) {$srv_root = dirname($srv_root);}
 include_once("$srv_root/includes/all.php");
 include_once("includes/functions.php");
+include_once("includes/de-encryption.php");
+encrypt();
 
 $imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'bmp'];
 $videoExtensions = ['mp4', 'mov', 'mkv', 'webm', 'm4v'];
@@ -11,7 +13,7 @@ $audioExtensions = ['mp3', 'm4a', 'wav'];
 $archiveExtensions = ['iso', 'tar', 'gz', 'zip', '7z'];
 
 // Get all files in the current directory
-$files = scandir(__DIR__."/".$_SESSION['username']."_uploads");
+$files = scandir(__DIR__."/UPLOADS/".$_SESSION['username']."_uploads");
 
 // Filter files that are images
 $images = array_filter($files, function ($file) use ($imageExtensions) {
@@ -71,7 +73,7 @@ return in_array($ext, $archiveExtensions);
         <h1>Image Gallery</h1>
         <div class='gallery'>
             <?php foreach ($images as $image): ?>
-                <a href='<?= $_SESSION['username']."_uploads/".htmlspecialchars($image) ?>'><img src='<?= $_SESSION['username']."_uploads/".htmlspecialchars($image) ?>' alt='<?= $_SESSION['username']."_uploads/".htmlspecialchars($image) ?>'></a>
+                <a href='<?= "UPLOADS/".$_SESSION['username']."_uploads/".htmlspecialchars($image) ?>'><img src='<?= "UPLOADS/".$_SESSION['username']."_uploads/".htmlspecialchars($image) ?>' alt='<?= "UPLOADS/".$_SESSION['username']."_uploads/".htmlspecialchars($image) ?>'></a>
             <?php endforeach; ?>
         </div>
 
@@ -80,7 +82,7 @@ return in_array($ext, $archiveExtensions);
             <?php foreach ($videos as $video): ?>
                 <h3><?= htmlspecialchars($video) ?></h3>
                 <video width=1320 height=720 controls preload=auto>
-                    <source src='<?= $_SESSION['username']."_uploads/".htmlspecialchars($video) ?>' type='video/mp4'>
+                    <source src='<?= "UPLOADS/".$_SESSION['username']."_uploads/".htmlspecialchars($video) ?>' type='video/mp4'>
                 </video>
             <?php endforeach; ?>
         </div>
@@ -88,9 +90,9 @@ return in_array($ext, $archiveExtensions);
         <h1>Audio Lounge</h1>
         <div class='gallery'>
             <?php foreach ($audios as $audio): ?>
-                <li><a href='<?= $_SESSION['username']."_uploads/".htmlspecialchars($audio) ?>' download><?= $_SESSION['username']."_uploads/".htmlspecialchars($audio) ?></a></li>
+                <li><a href='<?= "UPLOADS/".$_SESSION['username']."_uploads/".htmlspecialchars($audio) ?>' download><?= "UPLOADS/".$_SESSION['username']."_uploads/".htmlspecialchars($audio) ?></a></li>
                 <audio controls>
-                    <source src='<?= $_SESSION['username']."_uploads/".htmlspecialchars($audio) ?>' type='audio/mp3'>
+                    <source src='<?= "UPLOADS/".$_SESSION['username']."_uploads/".htmlspecialchars($audio) ?>' type='audio/mp3'>
                 </audio>
             <?php endforeach; ?>
         </div>
@@ -98,7 +100,7 @@ return in_array($ext, $archiveExtensions);
         <h1>Archived Files</h1>
         <div class='gallery'>
             <?php foreach ($archives as $archive): ?>
-                <h3><a download href='<?= $_SESSION['username']."_uploads/".htmlspecialchars($archive) ?>'><?= $_SESSION['username']."_uploads/".htmlspecialchars($archive) ?></a></h3>
+                <h3><a download href='<?= "UPLOADS/".$_SESSION['username']."_uploads/".htmlspecialchars($archive) ?>'><?= "UPLOADS/".$_SESSION['username']."_uploads/".htmlspecialchars($archive) ?></a></h3>
             <?php endforeach; ?>
         </div>
 
