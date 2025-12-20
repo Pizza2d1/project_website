@@ -1,0 +1,27 @@
+/* Global variables. */
+:root {
+  /* Default (light) theme */
+  --bg: #fff;
+  --text: #212121;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #1a1a1a;
+    --text: #dcdcdc;
+  }
+  /* Add a bit of transparency so light media isn't so glaring in dark mode */
+  img,
+  video {
+    opacity: 0.8;
+  }
+}
+
+/* Make the body a nice central block */
+body {
+  color: var(--text);
+  background-color: var(--bg);
+  font-size: 1.15rem;
+}

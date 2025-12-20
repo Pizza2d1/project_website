@@ -76,4 +76,9 @@ if ($uploadOk == 0) {
 
 <br>
 <h1 style='text-align:center;'><a href='main.php'>Check current uploads</a></h1>
-<?php header("refresh:0;url=/account_uploads/"); ?>
+<?php if ($uploadOk == 0) {
+  header("refresh:5;url=/account_uploads/"); 
+} else {
+  header("refresh:0;url=/account_uploads/"); 
+}
+?>

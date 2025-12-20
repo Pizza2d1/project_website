@@ -65,7 +65,7 @@ if (!is_dir(__DIR__."/UPLOADS/".$_SESSION['username']."_uploads/ENCRYPTED")) mkd
       <input type="submit" value="Upload Image" name="submit">
       <div class="selected-file" id="selectedFile"></div>
     </form>
-    <?php if (isset($_SESSION['upload_name'])) echo $_SESSION['upload_name']." was uploaded"; ?>
+    <?php if (isset($_SESSION['upload_name'])) echo $_SESSION['upload_name']." was uploaded"; unset($_SESSION['upload_name'])?>
     <h3><a href="main.php">Check your current uploads</a></h3>
     <h3>Currently allowed file types:</h3>
     <h3>Images</h3>

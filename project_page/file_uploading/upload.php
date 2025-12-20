@@ -55,7 +55,7 @@ if(in_array($imageFileType, $image_ext)) {
   echo "Your archive file was processed";
 } else {
   echo "Your file extension ".$imageFileType." was not allowed";
-  $uploadOk = 0;
+  #$uploadOk = 0;
 }
 
 // Check if $uploadOk is set to 0 by an error

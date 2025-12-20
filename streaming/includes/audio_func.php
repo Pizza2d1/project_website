@@ -5,6 +5,7 @@ $debug = false;
 
 $music['artists'] = [];
 $artists = array_diff($artists, [".", "..", "index.php"]);
+$count = 0;
 foreach ($artists as $artist) {
     $covers = [];
     if ($debug) {
@@ -41,20 +42,25 @@ foreach ($artists as $artist) {
         }
     }
 
+    if ($count == 0) echo "<div class='block-row'>";
     echo "
-    <div class='show-row'>
-      <div class='show-column'>
-          <div class='show-card'>
-              <h3><a href='$artist'>$artist</h3>
+      <div class='block-column'>
+          <div class='block-card'>
+              <h3><a href='".basename($dir)."/$artist'>$artist</h3>
               ";
               echo ($imagey == null) ? "" : "<img src=\"$imagey\" alt='Image not found' width='100%' height='auto'>";
               $keys = array_keys($covers);
-              foreach ($keys as $key) echo ($covers[$key] == null) ? "" : "<a href='$artist/$key'><img src=\"$covers[$key]\" alt='Image not found' width='30%' height='auto'></a>";
+              foreach ($keys as $key) echo ($covers[$key] == null) ? "" : "<a href='".basename($dir)."/$artist/$key'><img src=\"$covers[$key]\" alt='Image not found' width='30%' height='auto'></a>";
     echo "
           </div>
       </div>
-    </div>
     ";
+    if ($count == 3) {
+        echo "</div>";
+        $count = 0; 
+    } else {
+        $count++;
+    }
 }
 
 }

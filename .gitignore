@@ -52,4 +52,10 @@ streaming/movies/*
 !streaming/index.php
 !streaming/includes
 !streaming/includes/*
+!includes
+!includes/*
+includes/sql_functions.php
+!catalog
+!catalog/*
+!catalog/includes/*
 

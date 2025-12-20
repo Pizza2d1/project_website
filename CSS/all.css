@@ -104,6 +104,7 @@ ul {
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
+  color: white;
 }
 
 /* Dropdown content (hidden by default) */

@@ -22,13 +22,10 @@ return in_array($ext, $imageExtensions);
 <body>
     <?php echo navbar(); ?>
     <?php if (isGranted()) : ?>
-      <?php display_options(); ?>
-          <h1>Image Gallery</h1>
-          <div class='gallery'>
-              <?php foreach ($images as $image): ?>
-                  <a href='<?= $_SESSION['username']."_uploads/".htmlspecialchars($image) ?>'><img src='<?= $_SESSION['username']."_uploads/".htmlspecialchars($image) ?>' alt='<?= $_SESSION['username']."_uploads/".htmlspecialchars($image) ?>'></a>
-              <?php endforeach; ?>
-          </div>
+      <?php 
+        display_options();
+        display_images($images); 
+      ?>
     <?php else : ?>
       <h3>You're not supposed to be here</h3>
       <?php header("refresh:2;url=/"); ?>

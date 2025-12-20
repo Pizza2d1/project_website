@@ -11,7 +11,7 @@ $archiveExtensions = ['iso', 'tar', 'gz', 'zip', '7z'];
 $files = scandir(__DIR__."/UPLOADS/".$_SESSION['username']."_uploads");
 
 // Filter files that are images
-$images = array_filter($files, function ($file) use ($archiveExtensions) {
+$archives = array_filter($files, function ($file) use ($archiveExtensions) {
 $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
 return in_array($ext, $archiveExtensions);
 });
@@ -22,13 +22,10 @@ return in_array($ext, $archiveExtensions);
 <body>
     <?php echo navbar(); ?>
     <?php if (isGranted()) : ?>
-        <?php display_options(); ?>
-            <h1>Archived Files</h1>
-            <div class='gallery'>
-                <?php foreach ($images as $image): ?>
-                    <h3><a download href='<?= $_SESSION['username']."_uploads/".htmlspecialchars($image) ?>'><?= $_SESSION['username']."_uploads/".htmlspecialchars($image) ?></a></h3>
-                <?php endforeach; ?>
-            </div>
+      <?php 
+        display_options();
+        display_archives($archives); 
+      ?>
     <?php else : ?>
       <h3>You're not supposed to be here</h3>
       <?php header("refresh:2;url=/"); ?>

@@ -12,12 +12,12 @@ $audioExtensions = ['mp3', 'm4a', 'wav'];
 
 <!DOCTYPE html>
 <html lang="en-US">
-    <?php echo head(['all','main_page']);?>
+    <?php echo head(['all','blocks','dark-bg']);?>
     <body>
     <?php echo navbar(); ?>
         <h1>Audio Lounge</h1>
         <div class='gallery'>
-            <?php showArtistBlocks(__DIR__); ?>
+            <?php showArtistBlocks(__DIR__."/ARTISTS"); ?>
         </div>
 
     </body>

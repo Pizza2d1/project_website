@@ -1,0 +1,51 @@
+<?php $srv_root = __DIR__;
+$slash_count = substr_count($srv_root, '/');
+for ($i = 3; $i < $slash_count; $i++) {$srv_root = dirname($srv_root);}
+include_once("includes/all.php");
+include_once("includes/main_page.php");
+include_once("includes/sql_functions.php");
+include_once("includes/functions.php");
+session_start();
+[$names, $descriptions, $images, $prices] = getProductsSql();
+$images_v = array_values($images);
+$names_v = array_values($names);
+$descriptions_v = array_values($descriptions);
+$prices_v = array_values($prices);
+if (isset($_GET['item_number'])) echo $_GET['item_number'];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <?php echo head(['all', 'blocks']); ?>
+    <body>
+
+<?php    
+$count = 0;
+$total = count($names);
+$provide_links = true;
+for ($i=0; $i<$total; $i++) {
+    $change_name = str_replace(" ", "_", $names[$i+1].'change');
+    if (isset($_POST[$change_name])) {$catch_change = $_POST[$change_name];} else $catch_change = "";
+    if ($count == 0) echo "<div class='block-row'>";
+
+    echo show_product($i,$provide_links);
+
+    if ($count == 3 || $count+1 == $total) {
+        echo "</div>";
+        $count = 0; 
+    } else {
+        $count++;
+    }
+
+    if ($catch_change!=null && $catch_change != '') {
+        CatalogSqlQuery("update product set description='$catch_change' where name='".$names[$i+1]."';"); 
+        #echo "update product set description='$catch_change' where name=\"".$names[$i+1]."\";";
+        header('location: catalog.php');
+    }
+}
+
+?>
+
+    </body>
+</html>
